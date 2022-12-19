@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Be+Vietnam+Pro:wght@400;500;700&family=Big+Shoulders+Display&family=Courgette&family=Inter:wght@400;700&family=Josefin+Slab:wght@100&family=Kalam:wght@300&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca&family=Montserrat:wght@500;700&family=Neonderthaw&family=Oleo+Script+Swash+Caps:wght@400;700&family=Outfit:wght@300;400;600&family=Pacifico&family=Poppins:wght@200;400;600&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 90px;
+      border-bottom: 2px solid #a8a6a6;
+      width: 70rem;
+      margin: auto;
+     
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .more {
+      padding-left: 40px;
+    }
+
+
+    .nav .more ol {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      /* display: block; */
+
+    }
+
+    .nav .more ol li{
+      list-style: none;
+      padding: 33px 16px;
+      opacity: 50%;
+      cursor: pointer;
+      font-family: 'Kumbh Sans', sans-serif;
+      
+    }
+
+    .nav .more ol li:hover{
+      opacity: 100%;
+      color: black;
+
+      border-bottom:3px solid  hsl(26, 100%, 55%);
+    }
+
+
+    .nav .pro{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+  .nav .pro .card img{
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .nav .pro .card img:hover{
+      height: 30px;
+    }
+
+    .nav .pro .bro img{
+      height: 40px;
+      border: 1px solid hsl(26, 100%, 55%);
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .nav .pro .bro img:hover{
+      border: 4px solid hsl(26, 100%, 55%);
+      border-radius: 50%;
+    }
+
+    .nav .pro .card{
+      padding-right:30px;
+    }
+
+    .main{
+      display: flex;
+      justify-content:space-around;
+      align-items: center;
+      padding-top: 70px;
+      width: 900px;
+      margin: auto;
+    }
+
+.main .part1 .mainimg img{
+height: 400px;
+border-radius: 10px;
+}
+
+.main .part1 .option img{
+  height: 85px;
+  margin-left: 10px;
+  border-radius: 6px;
+}
+
+
+.main .part1 .option img:hover{
+  opacity: 50%;
+  border:3px solid hsl(26, 100%, 55%);
+}
+.main .part1 .option{
+  padding:20px 0px 0 0;
+}
+
+
+
+
+.main .part2 .op p{
+    color: hsl(26, 100%, 55%);
+    padding-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Kumbh Sans', sans-serif;
+
+}
+
+.main .part2 .pl p{
+  opacity: 50%;
+  font-size: 14px;
+  padding: 10px 0 10px 0;
+  max-width: 420px;
+  font-family: 'Kumbh Sans', sans-serif;
+  padding-bottom: 20px;
+  padding-top: 30px;
+}
+
+.main .part2 .mainprice{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  right:80px; 
+  
+}
+
+.part2 h1{
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 3rem;
+}
+
+.part2 .mainprice .ji{
+  font-weight: bold;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 20px;
+}
+
+/* .part2 .mainprice .ki{
+ background-color: hsl(26, 100%, 55%);
+ opacity:0.2;
+} */
+
+.part2 .mainprice .ki p{
+  color:hsl(26, 100%, 55%);
+  font-size: 15px;
+  font-weight: bold;
+  position: relative;
+  right:155px;
+  bottom: 9px;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.addcard{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  padding-top: 20px;
+  position: relative;
+  right: 30px;
+}
+
+.addcard .incre{
+background-color: #F5F5F5;
+display: flex;
+width: 100px;
+height: 43px;
+border-radius: 6px;
+margin: 0 2px 0 2px;
+align-items: center;
+justify-content: space-between;
+cursor: pointer;
+font-family: 'Kumbh Sans', sans-serif;
+position: relative;
+right:24px;
+
+}
+
+.card3{
+  position: relative;
+  right: 36px;
+}
+
+
+.addcard .card3 button{
+  height: 43px;
+  width: 220px;
+  border: none;
+  border-radius:6px;
+  color: white;
+  background-color: hsl(26, 100%, 55%);
+  position: relative;
+  left: 30px;
+  cursor: pointer;
+  font-family: 'Kumbh Sans', sans-serif;
+  
+}
+
+.part1{
+  position: relative;
+  right: 60px;
+}
+
+
+@media only screen and (max-width:700px){
+  .nav .more ol{
+  display: none;
+}
+
+.nav{
+  border:none;
+  width:20.5rem;
+  position: relative;
+  right: 160px;
+}
+
+
+.main{
+  flex-direction: column;
+  width: 20.5rem;
+}
+}
+
+  </style>
+</head>
+
+<body>
+
+  <div class="nav">
+    <div class="logo">
+      <img src="images/logo.svg" alt="logo">
+
+      <div class="more">
+        <ol>
+          <li>Collections</li>
+          <li>Men</li>
+          <li>Women</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ol>
+      </div>
+    </div>
+
+
+    <div class="pro">
+      <div class="card">
+        <img src="images/icon-cart.svg">
+      </div>
+      <div class="bro">
+        <img src="images/image-avatar.png">
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="part1">
+      <div class="mainimg">
+        <img src="/images/image-product-1.jpg">
+      </div>
+      <div class="option">
+        <img src="/images/image-product-1-thumbnail.jpg">
+        <img src="/images/image-product-2-thumbnail.jpg">
+        <img src="/images/image-product-3-thumbnail.jpg">
+        <img src="/images/image-product-4-thumbnail.jpg">
+      </div>
+    </div>
+    <div class="part2">
+      <div class="op">
+      <p>Sneaker Company</p>
+      </div>
+      <h1> Fall Limited Edition <br>Sneakers</h1>
+      <div class="pl">
+      <p>These low-profile sneakers are your perfect casual wear companion. Featuring a
+        durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+      </div>
+      <div class="mainprice">
+        <div class="ji">
+          <p>$125.00</p>
+          <p style="font-size:15px; opacity:50%; text-decoration: line-through;">$250.00</p>
+        </div>
+        <div class="ki">
+          <p> 50%</p>
+        </div>
+      </div>
+
+      <div class="addcard">
+        <div class="incre">
+          <img src="/images/icon-minus.svg">
+          <p>0</p>
+          <img src="/images/icon-plus.svg">
+        </div>
+
+        <div class="card3">
+           <button> <i class='fas fa-cart-arrow-down'></i>Add to cart</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <!-- Collections
+  Men
+  Women
+  About
+  Contact
+
+  Sneaker Company
+
+  Fall Limited Edition Sneakers
+
+  These low-profile sneakers are your perfect casual wear companion. Featuring a 
+  durable rubber outer sole, they’ll withstand everything the weather can offer.
+
+  $125.00
+  50%
+  $250.00
+
+  0
+  Add to cart -->
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+
+</html>
